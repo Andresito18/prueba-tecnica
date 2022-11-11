@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    component: backend
+    instance: app
+    name: backend
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      component: backend
+      instance: app
+      name: backend
+  template:
+    metadata:
+      labels:
+        component: backend
+        instance: app
+        name: backend
+    spec:
+      containers:
+      - name: app
+        image: andyayala20/prueba-tecnica
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          name: webapp
+      imagePullSecrets:
+        - name: myregistrykey

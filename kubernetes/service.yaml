@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  labels:
+    component: backend
+    instance: app
+    name: backend
+  namespace: default
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: webapp # one of the major thing w/o it you could not have active targets in Prometheus
+  selector:
+    component: backend
+    instance: app
+    name: backend
