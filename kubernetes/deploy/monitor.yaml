@@ -7,7 +7,7 @@ metadata:
     instance: app
     name: backend
     release: kube-prometheus-stack # You need to verify what is your realease name pf prometheus
-  namespace: prometheus-monitoring # choose in what name space your prometheus is 
+  namespace: prometheus # choose in what name space your prometheus is 
 spec:
   namespaceSelector:
     matchNames:

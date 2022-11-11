@@ -83,4 +83,22 @@ Para poner a funcionar esta parte se necesita poder tener docker registry la url
  [docker-registry](https://hub.docker.com/r/andyayala20/prueba-tecnica)
 
 
-en este 
+Debes tener instalado 
+
+- HELM
+- KUBECTL
+- MINIKUBE
+
+para poder funcionar debes correr el siguiente comando:
+
+```sh
+cd kubernetes
+```
+
+```sh
+chmod 755 install.sh
+```
+
+```sh
+./install.sh
+```
